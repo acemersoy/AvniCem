@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Avni Cem Ersoy — Software Developer</title>
+<meta name="description" content="Avni Cem Ersoy · Junior Software Developer. Backend, API tasarımı, temiz mimari ve siber güvenlik odaklı yazılım geliştirici." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<noscript><style>.boot{display:none!important}.reveal{opacity:1!important;transform:none!important}body{cursor:auto!important}</style></noscript>
+</head>
+<body>
+
+<!-- Grain + grid overlays -->
+<div class="grain" aria-hidden="true"></div>
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- Boot / preloader -->
+<div class="boot" id="boot" aria-hidden="true">
+  <div class="boot-inner">
+    <pre class="boot-log" id="bootLog"></pre>
+  </div>
+</div>
+
+<!-- Progress + nav -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <a href="#top" class="nav-brand" data-cursor>
+    <span class="brand-mark">AC</span>
+    <span class="brand-dot"></span>
+  </a>
+  <div class="nav-links">
+    <a href="#about"   data-cursor data-num="01">hakkımda</a>
+    <a href="#skills"  data-cursor data-num="02">yetenekler</a>
+    <a href="#work"    data-cursor data-num="03">deneyim</a>
+    <a href="#projects" data-cursor data-num="04">projeler</a>
+    <a href="#terminal" data-cursor data-num="05">terminal</a>
+    <a href="#contact" data-cursor data-num="06">iletişim</a>
+  </div>
+  <a href="#contact" class="nav-cta" data-cursor data-magnetic>
+    <span>İletişime geç</span>
+  </a>
+</nav>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="hero-meta hero-meta-left reveal">
+      <span class="tick">// junior software developer</span>
+      <span class="tick">// ankara, türkiye</span>
+      <span class="tick">// 2025</span>
+    </div>
+
+    <div class="hero-center">
+      <p class="hero-eyebrow reveal">
+        <span class="led"></span> Sistem çevrimiçi — geliştirici tanıtılıyor
+      </p>
+      <h1 class="hero-title">
+        <span class="line"><span class="word">Avni</span> <span class="word">Cem</span></span>
+        <span class="line italic"><span class="word">Ersoy</span><span class="caret">_</span></span>
+      </h1>
+      <p class="hero-sub reveal">
+        Backend, API tasarımı, temiz mimari ve veritabanı sistemleri üzerine
+        çalışan bir yazılım geliştirici. Sağlam altyapılar kurarım, karmaşayı
+        sadeleştiririm, güvenliği sonradan değil baştan düşünürüm.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#projects" class="btn btn-primary" data-cursor data-magnetic>
+          <span>Projelere bak</span>
+          <svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#terminal" class="btn btn-ghost" data-cursor data-magnetic>
+          <span>$ terminal'i dene</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- terminal boot card -->
+    <aside class="hero-terminal reveal" aria-label="terminal önizleme">
+      <div class="term-bar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="term-name">avnicem@dev — zsh</span>
+      </div>
+      <pre class="term-body" id="heroTerm"></pre>
+    </aside>
+
+    <div class="hero-scroll reveal">
+      <span>kaydır</span>
+      <div class="scroll-line"><span></span></div>
+    </div>
+  </header>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>C#</span><i>·</i><span>.NET</span><i>·</i><span>ASP.NET Core</span><i>·</i><span>SQL Server</span><i>·</i><span>PostgreSQL</span><i>·</i><span>REST API</span><i>·</i><span>Next.js</span><i>·</i><span>Kotlin</span><i>·</i><span>Python</span><i>·</i><span>Docker</span><i>·</i><span>Clean Architecture</span><i>·</i><span>Cybersecurity</span><i>·</i>
+      <span>C#</span><i>·</i><span>.NET</span><i>·</i><span>ASP.NET Core</span><i>·</i><span>SQL Server</span><i>·</i><span>PostgreSQL</span><i>·</i><span>REST API</span><i>·</i><span>Next.js</span><i>·</i><span>Kotlin</span><i>·</i><span>Python</span><i>·</i><span>Docker</span><i>·</i><span>Clean Architecture</span><i>·</i><span>Cybersecurity</span><i>·</i>
+    </div>
+  </div>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section about" id="about">
+    <div class="section-head reveal">
+      <span class="section-idx">01</span>
+      <h2 class="section-title">Hakkımda</h2>
+    </div>
+    <div class="about-grid">
+      <p class="about-lead reveal">
+        Backend geliştirme, web ve mobil uygulamalar ile veritabanı odaklı
+        sistemlerde uygulamalı deneyime sahip bir Junior Software Developer'ım.
+      </p>
+      <div class="about-body reveal">
+        <p>
+          <strong>PTT Bilişim Teknolojileri</strong>'nde tamamladığım stajda kurumsal
+          ölçekli .NET projelerine katkı verdim; backend servisleri, API uç noktaları,
+          veritabanı işlemleri ve hata düzeltme süreçlerinde çalıştım.
+        </p>
+        <p>
+          İlgi alanlarım backend geliştirme, API tasarımı, temiz mimari, veritabanı
+          sistemleri ve siber güvenlik odaklı yazılım geliştirme. Gerçek proje
+          gereksinimleriyle çalışmaktan, var olan sistemleri debug edip iyileştirmekten
+          keyif alıyorum.
+        </p>
+        <a class="about-quick" href="#" id="downloadCv" data-cursor data-magnetic>
+          <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          CV'yi indir (PDF)
+        </a>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat reveal" data-count="4" data-suffix="+">
+        <span class="stat-num">0</span>
+        <span class="stat-label">öne çıkan proje</span>
+      </div>
+      <div class="stat reveal" data-count="7" data-suffix="+">
+        <span class="stat-num">0</span>
+        <span class="stat-label">dil & framework</span>
+      </div>
+      <div class="stat reveal" data-count="1" data-suffix="">
+        <span class="stat-num">0</span>
+        <span class="stat-label">yayınlanmış mobil uygulama</span>
+      </div>
+      <div class="stat reveal" data-count="2026" data-suffix="" data-raw="true">
+        <span class="stat-num">0</span>
+        <span class="stat-label">mezuniyet (ön lisans)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section skills" id="skills">
+    <div class="section-head reveal">
+      <span class="section-idx">02</span>
+      <h2 class="section-title">Teknik Yetenekler</h2>
+    </div>
+
+    <div class="skill-filters reveal" id="skillFilters">
+      <button class="chip is-active" data-filter="all" data-cursor>tümü</button>
+      <button class="chip" data-filter="lang" data-cursor>diller</button>
+      <button class="chip" data-filter="backend" data-cursor>backend</button>
+      <button class="chip" data-filter="frontend" data-cursor>frontend</button>
+      <button class="chip" data-filter="db" data-cursor>veritabanı</button>
+      <button class="chip" data-filter="tools" data-cursor>araçlar</button>
+    </div>
+
+    <div class="skill-grid" id="skillGrid">
+      <!-- populated by JS -->
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section work" id="work">
+    <div class="section-head reveal">
+      <span class="section-idx">03</span>
+      <h2 class="section-title">Deneyim</h2>
+    </div>
+
+    <div class="timeline">
+      <article class="tl-item reveal">
+        <div class="tl-rail"><span class="tl-node"></span></div>
+        <div class="tl-card" data-tilt>
+          <div class="tl-top">
+            <h3>Software Developer Intern</h3>
+            <span class="tl-year">2025</span>
+          </div>
+          <p class="tl-org">PTT Bilişim Teknolojileri A.Ş. · Ankara</p>
+          <ul class="tl-list">
+            <li>Kurumsal ölçekli .NET tabanlı iç projelere katkı.</li>
+            <li>Backend servisleri, API uç noktaları, form işlemleri ve veritabanı bağlı modüller.</li>
+            <li>Microsoft SQL Server ile sorgulama, veri modelleme ve veri doğrulama.</li>
+            <li>Hata düzeltme, özellik geliştirme ve arayüz iyileştirmeleri.</li>
+            <li>Jira ile agile görev takibi, Git tabanlı versiyon kontrolü.</li>
+          </ul>
+          <div class="tl-tags">
+            <span>.NET</span><span>SQL Server</span><span>REST API</span><span>Jira</span><span>Git</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="tl-item reveal">
+        <div class="tl-rail"><span class="tl-node"></span></div>
+        <div class="tl-card" data-tilt>
+          <div class="tl-top">
+            <h3>Bilgisayar Programcılığı — Ön Lisans</h3>
+            <span class="tl-year">2024 – 2026</span>
+          </div>
+          <p class="tl-org">Ankara Yıldırım Beyazıt Üniversitesi · Ankara</p>
+          <ul class="tl-list">
+            <li>Backend geliştirme, veritabanı sistemleri ve yazılım mimarisi üzerine eğitim.</li>
+            <li>Siber güvenlik, API güvenliği ve ölçeklenebilir sistemlere güçlü ilgi.</li>
+          </ul>
+          <div class="tl-tags"><span>CS Temelleri</span><span>Algoritmalar</span><span>Veritabanı</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section projects" id="projects">
+    <div class="section-head reveal">
+      <span class="section-idx">04</span>
+      <h2 class="section-title">Öne Çıkan Projeler</h2>
+    </div>
+
+    <div class="proj-list" id="projList">
+
+      <article class="proj reveal" data-tilt>
+        <div class="proj-index">/01</div>
+        <div class="proj-main">
+          <h3 class="proj-title">Orient Wedding Platform</h3>
+          <p class="proj-desc">
+            Rezervasyon, müşteri, finans ve yönetim modüllerine sahip tam yığın düğün
+            mekânı yönetim platformu. Rezervasyon çakışma tespiti, kapora ve ödeme
+            takibi ile bakiye hesaplama iş mantığını tasarladım.
+          </p>
+          <ul class="proj-points">
+            <li>Çakışma tespiti & bakiye hesaplama mantığı</li>
+            <li>Operasyonel iş akışları için API uç noktaları</li>
+            <li>Müşteri odaklı portal yapısı</li>
+          </ul>
+        </div>
+        <div class="proj-side">
+          <span class="proj-type">Full-Stack · Web</span>
+          <div class="proj-stack">
+            <span>.NET Core Web API</span><span>Next.js</span><span>PostgreSQL</span><span>TypeScript</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj reveal" data-tilt>
+        <div class="proj-index">/02</div>
+        <div class="proj-main">
+          <h3 class="proj-title">Radio Atlas</h3>
+          <p class="proj-desc">
+            İnteraktif dünya haritası üzerinden radyo istasyonları keşfetmeye odaklı
+            mobil uygulama. Canlı yayın akışı, ülke bazlı keşif, harita tabanlı gezinme
+            ve quiz tabanlı etkileşim. <em>Google Play Store'da yayında.</em>
+          </p>
+          <ul class="proj-points">
+            <li>Canlı radyo akışı & ülke bazlı keşif</li>
+            <li>MapLibre ile harita üzerinde keşif deneyimi</li>
+            <li>Akıcı, keşif odaklı mobil arayüz</li>
+          </ul>
+        </div>
+        <div class="proj-side">
+          <span class="proj-type">Mobil · Android</span>
+          <div class="proj-stack">
+            <span>Kotlin</span><span>Android SDK</span><span>MapLibre</span>
+          </div>
+          <span class="proj-badge">▲ Play Store</span>
+        </div>
+      </article>
+
+      <article class="proj reveal" data-tilt>
+        <div class="proj-index">/03</div>
+        <div class="proj-main">
+          <h3 class="proj-title">Rhymos</h3>
+          <p class="proj-desc">
+            Zamanlama odaklı oynanış mekaniklerine sahip ritim tabanlı oyun prototipi.
+            Çekirdek oyun mantığı, etkileşimli UI bileşenleri, müzik senkronizasyon
+            mantığı ve oyuncu etkileşim sistemleri üzerine çalıştım.
+          </p>
+          <ul class="proj-points">
+            <li>Müzik senkronizasyon & zamanlama mantığı</li>
+            <li>Çekirdek oyun döngüsü & varlık yönetimi</li>
+            <li>Etkileşimli UI bileşenleri</li>
+          </ul>
+        </div>
+        <div class="proj-side">
+          <span class="proj-type">Oyun · Prototip</span>
+          <div class="proj-stack"><span>C#</span><span>Unity</span></div>
+        </div>
+      </article>
+
+      <article class="proj reveal" data-tilt>
+        <div class="proj-index">/04</div>
+        <div class="proj-main">
+          <h3 class="proj-title">Film Öneri Sistemi</h3>
+          <p class="proj-desc">
+            Kullanıcı puanları ve makine öğrenmesi tabanlı sınıflandırma mantığı kullanan
+            film öneri sistemi. pandas ve scikit-learn ile veri işleme ve model eğitimi;
+            Streamlit ile etkileşimli arayüz.
+          </p>
+          <ul class="proj-points">
+            <li>ML tabanlı sınıflandırma & öneri mantığı</li>
+            <li>pandas / scikit-learn ile model eğitimi</li>
+            <li>Streamlit etkileşimli arayüz</li>
+          </ul>
+        </div>
+        <div class="proj-side">
+          <span class="proj-type">Veri · ML</span>
+          <div class="proj-stack"><span>Python</span><span>Streamlit</span><span>scikit-learn</span><span>pandas</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ INTERACTIVE TERMINAL ============ -->
+  <section class="section terminal-sec" id="terminal">
+    <div class="section-head reveal">
+      <span class="section-idx">05</span>
+      <h2 class="section-title">Canlı Terminal</h2>
+    </div>
+    <p class="term-hint reveal">
+      Gerçek bir kabuk gibi yazabilirsin. <code>help</code> ile başla — ya da
+      <code>whoami</code>, <code>skills</code>, <code>projects</code>, <code>contact</code> dene.
+    </p>
+
+    <div class="live-term reveal" id="liveTerm" data-cursor>
+      <div class="term-bar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="term-name">guest@avnicem.dev — bash</span>
+      </div>
+      <div class="live-body" id="liveBody">
+        <div class="live-out" id="liveOut"></div>
+        <div class="live-input-row">
+          <span class="prompt">guest@avnicem<span class="tilde">:~$</span></span>
+          <input id="liveInput" class="live-input" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="terminal komutu" />
+          <span class="live-caret">▋</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="contact-inner">
+      <span class="section-idx reveal">06</span>
+      <h2 class="contact-title reveal">
+        Birlikte bir şey <span class="italic">inşa edelim.</span>
+      </h2>
+      <p class="contact-sub reveal">
+        Backend, API veya full-stack bir işin mi var? Stajyer / junior bir geliştirici mi
+        arıyorsun? Kapı açık.
+      </p>
+
+      <div class="contact-links reveal">
+        <a class="c-link" href="mailto:a.cem.ersoy@hotmail.com" data-cursor data-magnetic>
+          <span class="c-label">e-posta</span>
+          <span class="c-val">a.cem.ersoy@hotmail.com</span>
+        </a>
+        <a class="c-link" href="tel:+905456940500" data-cursor data-magnetic>
+          <span class="c-label">telefon</span>
+          <span class="c-val">+90 545 694 05 00</span>
+        </a>
+        <a class="c-link" href="https://github.com/" target="_blank" rel="noopener" data-cursor data-magnetic>
+          <span class="c-label">github</span>
+          <span class="c-val">github.com/avnicem ↗</span>
+        </a>
+        <a class="c-link" href="https://linkedin.com/" target="_blank" rel="noopener" data-cursor data-magnetic>
+          <span class="c-label">linkedin</span>
+          <span class="c-val">linkedin.com/in/avnicem ↗</span>
+        </a>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <span>© 2026 Avni Cem Ersoy</span>
+      <span class="footer-mid">El ile tasarlandı & kodlandı · Ankara</span>
+      <button class="to-top" id="toTop" data-cursor data-magnetic>başa dön ↑</button>
+    </footer>
+  </section>
+
+</main>
+
+<script>
+  // Güvenlik ağı: script.js bir hata verirse boot ekranı takılı kalmasın
+  setTimeout(function(){
+    var b = document.getElementById('boot');
+    if (b && !b.classList.contains('done')) {
+      b.classList.add('done');
+      document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+    }
+  }, 5000);
+</script>
+<script src="script.js"></script>
+</body>
+</html>
